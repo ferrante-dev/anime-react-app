@@ -2,13 +2,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
-
 import Home from "./pages/Home";
 import AnimeInfo from "./pages/AnimeInfo";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Nav />
 
       <div className="app__content">
